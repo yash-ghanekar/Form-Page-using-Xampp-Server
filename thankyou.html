@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device=width", intial-scale="1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="thankyou.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script>
+        function generateReference() {
+    // Generate random alphanumeric reference number with 2 numbers
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    var randomAlphabets = '';
+    for (var i = 0; i < 5; i++) { // Adjust the length as needed
+        randomAlphabets += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    var randomNumber = Math.floor(Math.random() * 100);
+    var generatedRefNo = randomAlphabets + randomNumber;
+
+    // Set the generated reference number in the input field
+    document.getElementById("generatedRefNo").value = generatedRefNo;
+
+}
+</script>
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h2 class="logo">MJ</h2>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="search.html">Service</a>
+        </nav>
+    </header>
+    <div class="container">
+        <form>
+            <h1>Thank you for your support.</h1>
+            <h4 for="referenceNumber">Reference Number:</h4>
+            <input type="text" name="refnumber" id="generatedRefNo" readonly>
+            
+        </form>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>

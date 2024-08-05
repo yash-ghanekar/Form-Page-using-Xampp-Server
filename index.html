@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device=width", intial-scale="1.0">
+    <title>Home Page </title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script>
+       function generateReferenceNumber()
+        {
+            var prefix = "MJ";
+            var counter = 1;
+            var referencenumber = prefix + ("00000000" + counter).slice(-8);
+            counter++;
+            return referencenumber;
+        }
+        
+        var generatedNumber = generateReferenceNumber();
+        document.getElementById("referenceNumber").value = generatedNumber;
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h2 class="logo">MJ</h2>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="search.html">Service</a>
+        </nav>
+    </header>
+    <div class="container">
+        <form action="save.php" method="post">
+            <h1>Give Your Feedback</h1>
+            <div class="id">
+                <input type="text" name="fname" autocomplete="off" placeholder="Full Name"required>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="num">
+                <input type="text" name="mobile" placeholder="Mobile Number" autocomplete="off" pattern="[0-9]{10}" required>
+                <i class="fa-solid fa-phone"></i>
+                <textarea cols="15" rows="5" name="review" placeholder="Enter your opinion here.."></textarea> 
+            </div>
+            <div class="rating">
+                <input type="radio" name="rating" id="star-1" required><label for="star-1"><i class="fa-solid fa-star"></i></label>
+                <input type="radio" name="rating" id="star-2"><label for="star-2"><i class="fa-solid fa-star"></i></label>
+                <input type="radio" name="rating" id="star-3"><label for="star-3"><i class="fa-solid fa-star"></i></label>
+                <input type="radio" name="rating" id="star-4"><label for="star-4"><i class="fa-solid fa-star"></i></label>
+                <input type="radio" name="rating" id="star-5"><label for="star-5"><i class="fa-solid fa-star"></i></label>
+            </div>
+            <button>Submit</button>
+            
+            
+        </form>
+    
+        
+        
+    </div>
+    
+
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
